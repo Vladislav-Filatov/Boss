@@ -57,9 +57,12 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 0, viewRect.size.x)
 	position.y = clamp(position.y, 0, viewRect.size.y)
 	
+	if life == 0:
+		kill()
 func damage(amount: int):
 	life -= amount
 	emit_signal("player_life_changed", life)
 	
-
+func kill():
+	get_tree().reload_current_scene()
 
