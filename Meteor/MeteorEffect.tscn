@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CPUParticles2D.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+max_value = 200.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.632184, 161.136 ), 0.0, 0.0, 0, 0 ]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+lifetime = 10.0
+spread = 110.81
+color = Color( 0.411765, 0.54902, 0.0509804, 1 )
+anim_speed_curve = SubResource( 1 )
+script = ExtResource( 1 )
