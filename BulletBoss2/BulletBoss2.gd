@@ -12,6 +12,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_BulletBoss_area_entered(area):
-	if area is Player:
+	if area.is_in_group("player"):
 		area.damage(1)
 		queue_free()

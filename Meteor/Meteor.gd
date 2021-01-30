@@ -35,8 +35,6 @@ func damage(amount: int):
 
 func _on_VisibilityNotifier2D_screen_exit():
 	queue_free()
-	
-
 
 
 func _on_area_entered(area):

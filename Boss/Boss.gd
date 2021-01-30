@@ -1,9 +1,9 @@
 extends Area2D
-
-
-#move
-#shooting
+class_name Boss
+#move+
+#shooting+
 #spawn
+
 onready var timer= $teleportimer
 onready var firingPositions := $firingPositions
 onready var fireDelayTimer := $fireDelayTimer
@@ -12,7 +12,7 @@ export var fireDelay := 1
 var BulletBoss:= preload("res://BulletBoss2/BulletBoss2.tscn")
 
 var vel = Vector2()
-var life = 1
+var life = 1000
 func _ready():
 	pass
 	
@@ -39,6 +39,11 @@ func shoot():
 			var bullet = BulletBoss.instance()
 			bullet.global_position = child.global_position
 			get_tree().current_scene.add_child(bullet)
+
+
+func damage(amount: int):
+	life -= amount
+	emit_signal("player_life_changed", life)
 
 func kill():
 	queue_free()

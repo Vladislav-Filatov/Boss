@@ -11,6 +11,9 @@ func _on_Bullet_area_entered(area):
 	if area.is_in_group("damageable"):
 		area.damage(10)
 		queue_free()
+	if area is Boss:
+		area.damage(10)
+		queue_free()
 
 
 
