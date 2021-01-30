@@ -1,4 +1,5 @@
 extends Area2D
+class_name Player
 
 var plBullet := preload("res://Bullet/Bullet.tscn")
 
