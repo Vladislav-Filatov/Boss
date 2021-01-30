@@ -16,7 +16,7 @@ script = ExtResource( 6 )
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="backgroundColor" type="Sprite" parent="."]
-position = Vector2( 230.663, 302.231 )
+position = Vector2( 226.173, 301.109 )
 scale = Vector2( 3.01564, 3.98812 )
 texture = ExtResource( 3 )
 
@@ -27,7 +27,7 @@ script = ExtResource( 4 )
 one_shot = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 223.055, 367.054 )
+position = Vector2( 229.291, 368.836 )
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource( 2 )
@@ -36,5 +36,5 @@ script = ExtResource( 2 )
 one_shot = true
 
 [node name="Boss" parent="." instance=ExtResource( 7 )]
-position = Vector2( 223.673, 194.782 )
+position = Vector2( 221, 193 )
 [connection signal="player_life_changed" from="Player" to="CanvasLayer/Control" method="_on_Player_player_life_changed"]

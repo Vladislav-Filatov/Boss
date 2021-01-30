@@ -14,14 +14,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Bullet/Bullet.gd"
 }, {
-"base": "Area2D",
+"base": "Node2D",
 "class": "BulletBoss",
 "language": "GDScript",
 "path": "res://BulletBoss/BulletBoss.gd"
+}, {
+"base": "Area2D",
+"class": "BulletBoss2",
+"language": "GDScript",
+"path": "res://BulletBoss2/BulletBoss2.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"BulletBoss": ""
+"BulletBoss": "",
+"BulletBoss2": ""
 }
 
 [application]

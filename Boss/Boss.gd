@@ -7,9 +7,9 @@ extends Area2D
 onready var timer= $teleportimer
 onready var firingPositions := $firingPositions
 onready var fireDelayTimer := $fireDelayTimer
-export var fireDelay := 0.1
+export var fireDelay := 1
 
-var BulletBoss:= preload("res://BulletBoss/BulletBoss.tscn")
+var BulletBoss:= preload("res://BulletBoss2/BulletBoss2.tscn")
 
 var vel = Vector2()
 var life = 250
@@ -17,6 +17,7 @@ func _ready():
 	pass
 	
 func _physics_process(delta):
+	shoot()
 	if timer.is_stopped():
 		var rand = RandomNumberGenerator.new()
 		rand.randomize()
@@ -25,7 +26,7 @@ func _physics_process(delta):
 		var rand1 = RandomNumberGenerator.new()
 		rand1.randomize()
 		vel.y = rand1.randi_range(50, 300)
-		timer.start(1)
+		timer.start(1.5)
 	position = vel
 	if life ==0:
 		kill()
