@@ -6,7 +6,11 @@ extends Area2D
 #spawn
 onready var timer= $teleportimer
 var vel = Vector2()
+<<<<<<< Updated upstream
 var life = 250
+=======
+var life = 100
+>>>>>>> Stashed changes
 func _ready():
 	pass
 func _physics_process(delta):
