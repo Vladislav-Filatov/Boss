@@ -12,7 +12,7 @@ export var fireDelay := 1
 var BulletBoss:= preload("res://BulletBoss2/BulletBoss2.tscn")
 
 var vel = Vector2()
-var life = 30
+var life = 50
 func _ready():
 	pass
 	
@@ -47,4 +47,7 @@ func damage(amount: int):
 
 func kill():
 	queue_free()
+
+func get_life():
+	return life
 	
